@@ -9,8 +9,10 @@ function Weather() {
 
 
     return (
-        <div className=''>
+        <div className=''>  
+            <form onSubmit={submitHandler}>
 
+            </form>
         </div>
     )
 
