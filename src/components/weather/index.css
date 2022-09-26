@@ -1,0 +1,12 @@
+h1 {
+    font-size: 45px;
+}
+.weatherContainer{
+    /* border: 1px solid black; */
+    width: 500px;
+    background-color: rgba(0, 139, 139, 0.7);
+    height: 400px;
+    
+}
+/* .renderWeather{
+} */

@@ -1,6 +1,6 @@
 import './index.css';
-import { useState, useEffect } from 'react';
-import axios from "axios" 
+import { useState } from 'react';
+import axios from "axios"
 
 function Weather() {
     const [weatherData, setWeatherData] = useState(null);
@@ -10,23 +10,38 @@ function Weather() {
         e.preventDefault()
 
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=e0f99c494c2ce394a18cc2fd3f100543`)
+            .then(response => {
+                console.log(response.data);
+                setWeatherData(response.data);
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
-
-
-
     return (
-        <div className=''>  
+        <div className='mainContainer'>
+            <h1>
+                Weather App 
+            </h1>
             <form onSubmit={submitHandler}>
-                <input type="text" className='userInput' required placeholder='Enter Your City Name' onChange={(e => (setCityName(e.target.value)))}
-                 />
+                <input type="text" className='userInput' required placeholder='Enter Your City Name'
+                 onChange={(e => (setCityName(e.target.value)))}
+                />
             </form>
-            {(weatherData === null) ? null : 
-            <div className="mainContainer">
-                <div className="renderWeather">
-                    div
+            {(weatherData === null) ? null :
+                <div className="weatherContainer">
+                    <div className="renderWeather">
+                        <div className="cityName">
+                            {weatherData.name}
+                        </div>
+                        <div className="temp">
+                           <div className="mainTemp">Temperature: {Math.round(weatherData?.main?.temp)}</div> 
+                           <div className="minTemp">Minimum Temperature: {Math.round(weatherData?.main?.temp_min)}</div> 
+                           <div className="minTemp">Maximum Temperature: {Math.round(weatherData?.main?.temp_max)}</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
             }
 
