@@ -1,12 +1,45 @@
+body {
+    background-image: url(https://img.freepik.com/premium-vector/beautiful-summer-blue-sky-cloud-vector-illustration-background_8087-5401.jpg?w=740);
+    background-size: cover;
+}
 h1 {
     font-size: 45px;
 }
+
 .weatherContainer{
     /* border: 1px solid black; */
-    width: 500px;
-    background-color: rgba(0, 139, 139, 0.7);
-    height: 400px;
-    
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 300px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    margin-top: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-/* .renderWeather{
-} */
+
+.renderWeather{
+    /* align-items: center; */
+    padding: 20px;
+}
+
+.mainContainer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.cityName{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.userInput {
+    width: 250px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgb(63, 255, 229);
+}
