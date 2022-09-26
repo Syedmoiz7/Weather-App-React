@@ -4,6 +4,7 @@ body {
 }
 h1 {
     font-size: 45px;
+    color: white;
 }
 
 .weatherContainer{
@@ -40,6 +41,10 @@ h1 {
     height: 20px;
     padding: 20px;
     border-radius: 10px;
-    background-color: transparent;
-    border: 2px solid rgb(63, 255, 229);
+    background-color: darkblue;
+    color: white;
+    border: 5px solid white
 }
+/* .userInput :focus {
+    border: none;
+} */
