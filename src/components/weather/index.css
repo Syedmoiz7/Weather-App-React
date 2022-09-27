@@ -5,11 +5,12 @@ body {
 h1 {
     font-size: 45px;
     color: white;
+    
 }
 
 .weatherContainer{
     /* border: 1px solid black; */
-    width: 200px;
+    width: 300px;
     background-color: rgba(255, 255, 255, 0.3);
     height: 300px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
@@ -17,11 +18,19 @@ h1 {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    
+    
+
 }
 
 .renderWeather{
-    /* align-items: center; */
     padding: 20px;
+    /* border: 1px solid black; */
+    
 }
 
 .mainContainer{
@@ -36,15 +45,20 @@ h1 {
     font-weight: 600;
 }
 
-.userInput {
+input[type=text] {
     width: 250px;
-    height: 20px;
+    height: 10px;
     padding: 20px;
     border-radius: 10px;
-    background-color: darkblue;
-    color: white;
-    border: 5px solid white
+    /* box-sizing: border-box; */
+    /* color: white; */
+    /* background-color: darkblue; */
+    border: 3px solid rgb(123, 123, 255);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+input[type=text]:focus {
+    border: 3px solid  darkblue;
 }
-/* .userInput :focus {
-    border: none;
-} */
