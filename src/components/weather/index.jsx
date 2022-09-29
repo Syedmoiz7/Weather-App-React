@@ -36,9 +36,9 @@ function Weather() {
                             {weatherData.name}
                         </div>
                         <div className="temp">
-                           <div className="mainTemp">Temperature: {Math.round(weatherData?.main?.temp)}°C</div> 
-                           <div className="minTemp">Minimum Temperature: {Math.round(weatherData?.main?.temp_min)}°C</div> 
-                           <div className="minTemp">Maximum Temperature: {Math.round(weatherData?.main?.temp_max)}°C</div>
+                           <div className="mainTemp"><span>Temperature:</span> {Math.round(weatherData?.main?.temp)}°C</div> 
+                           <div className="minTemp"><span>Min-Temp:</span> {Math.round(weatherData?.main?.temp_min)}°C</div> 
+                           <div className="minTemp"><span>Max-Temp:</span> {Math.round(weatherData?.main?.temp_max)}°C</div>
                         </div>
                     </div>
                 </div>

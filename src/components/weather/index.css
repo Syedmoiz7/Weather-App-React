@@ -1,49 +1,57 @@
 body {
-    background-image: url(https://img.freepik.com/premium-vector/beautiful-summer-blue-sky-cloud-vector-illustration-background_8087-5401.jpg?w=740);
+    background-image: url(https://img.freepik.com/free-photo/fog-dark-clouds-mountains_1204-503.jpg?w=740&t=st=1664431544~exp=1664432144~hmac=cfaf22dc1a4bf72804b76e83f0bcccf8ac9cc7c566ca1e24954a0381e846a5bb);
     background-size: cover;
 }
+
 h1 {
     font-size: 45px;
     color: white;
-    
+
 }
 
-.weatherContainer{
+.weatherContainer {
     /* border: 1px solid black; */
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3); */
     height: 300px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); */
     margin-top: 50px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
     display: flex;
     /* align-items: center; */
     justify-content: center;
     /* align-content: space-between; */
-    
-    
+    background: rgba(6, 6, 6, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+
 
 }
 
-.renderWeather{
+.renderWeather {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
-    border: 1px solid black;
-    
+    color: white;
+    /* border: 1px solid black; */
+
 }
 
-.mainContainer{
+.mainContainer {
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 }
 
-.cityName{
+.cityName {
     font-size: 35px;
     /* font-weight: 600; */
 }
@@ -60,14 +68,17 @@ input[type=text] {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
-  }
-  
-input[type=text]:focus {
-    border: 3px solid  darkblue;
 }
 
-.temp> div> span {
+input[type=text]:focus {
+    border: 3px solid darkblue;
+}
+
+.temp>div>span {
     font-size: larger;
 }
 
-.temp {}
+.temp>div {
+    /* line-height: 40px; */
+    margin: 10px;
+}
