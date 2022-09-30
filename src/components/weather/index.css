@@ -6,12 +6,12 @@ body {
 h1 {
     font-size: 45px;
     color: white;
-
+    text-shadow: 2px 2px #000000;
 }
 
 .weatherContainer {
     /* border: 1px solid black; */
-    width: 300px;
+    width: 400px;
     /* background-color: rgba(255, 255, 255, 0.3); */
     height: 300px;
     /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); */
@@ -28,7 +28,7 @@ h1 {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 5px solid rgb(255, 255, 255);
+    /* border: 5px solid rgb(255, 255, 255); */
 
 
 
@@ -71,15 +71,28 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: 3px solid black;
+    border: 3px solid #555;
     width: 301px;
 }
 
 .temp>div>span {
-    font-size: larger;
+    font-size: 20px;
+}
+
+.hp>div>span {
+    font-size: 20px;
 }
 
 .temp>div {
     /* line-height: 40px; */
     margin: 10px;
+}
+
+.hp>div {
+    margin: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
 }

@@ -22,11 +22,11 @@ function Weather() {
     return (
         <div className='mainContainer'>
             <h1>
-                Weather App 
+                Weather App
             </h1>
             <form onSubmit={submitHandler}>
                 <input type="text" className='userInput' required placeholder='Enter Your City Name'
-                 onChange={(e => (setCityName(e.target.value)))}
+                    onChange={(e => (setCityName(e.target.value)))}
                 />
             </form>
             {(weatherData === null) ? null :
@@ -35,10 +35,17 @@ function Weather() {
                         <div className="cityName">
                             {weatherData.name}
                         </div>
-                        <div className="temp">
-                           <div className="mainTemp"><span>Temperature:</span> {Math.round(weatherData?.main?.temp)}°C</div> 
-                           <div className="minTemp"><span>Min-Temp:</span> {Math.round(weatherData?.main?.temp_min)}°C</div> 
-                           <div className="minTemp"><span>Max-Temp:</span> {Math.round(weatherData?.main?.temp_max)}°C</div>
+
+                        <div className="info">
+                            <div className="temp">
+                                <div className="mainTemp"><span>Temperature:</span> {Math.round(weatherData?.main?.temp)}°C</div>
+                                <div className="minTemp"><span>Min-Temp:</span> {Math.round(weatherData?.main?.temp_min)}°C</div>
+                                <div className="minTemp"><span>Max-Temp:</span> {Math.round(weatherData?.main?.temp_max)}°C</div>
+                            </div>
+                            <div className="hp">
+                                <div className="mainTemp"><span>Humidity:</span> {Math.round(weatherData?.main?.humidity)}%</div>
+                                <div className="minTemp"><span>Pressure:</span> {Math.round(weatherData?.main?.pressure)}mb</div>
+                            </div>
                         </div>
                     </div>
                 </div>
